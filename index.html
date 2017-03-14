@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready( function() {
+			function draw() {
+				var canvas = document.getElementById( 'testCanvas' );
+				var ctx = canvas.getContext( '2d' );
+				ctx.fillStyle = "#FF0000";
+				ctx.fillRect(0,0,150,70);
+				ctx.beginPath();
+				ctx.arc(100,75,50,0,2*Math.PI);
+				ctx.stroke();
+			}
+			draw();
+		} );
+	</script>
+</head>
+<body>
+	<canvas id="testCanvas" width="500" height="500" style="border:solid 1px #DDDDDD; margin: 200px auto; float: none; display: block;"></canvas>
+</body>
+</html>
